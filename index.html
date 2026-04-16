@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Goon Site</title>
+  <style>
+    body {
+      background: black;
+      color: lime;
+      font-family: monospace;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 50px;
+      text-shadow: 0 0 10px lime;
+    }
+
+    button {
+      background: lime;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    button:hover {
+      background: white;
+      color: black;
+    }
+
+    .box {
+      border: 2px solid lime;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>WELCOME TO MY SITE</h1>
+  <p>this is where things happen</p>
+
+  <button onclick="alert('you clicked it')">CLICK ME</button>
+  <button onclick="changeText()">DO SOMETHING</button>
+
+  <div class="box">
+    <p id="text">nothing yet...</p>
+  </div>
+
+  <script>
+    function changeText() {
+      const messages = [
+        "you found something",
+        "keep going",
+        "why are you still here",
+        "this site makes no sense",
+        "hello"
+      ];
+
+      const random = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("text").innerText = random;
+    }
+  </script>
+
+</body>
+</html>
